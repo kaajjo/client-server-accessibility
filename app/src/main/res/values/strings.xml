@@ -3,7 +3,7 @@
     <string name="logs_title">Логи</string>
     <string name="gesture_completed">Выполнено</string>
     <string name="gesture_canceled">Отменено</string>
-    <string name="server_info">Сервер: %1$s:%2$s</string>
+    <string name="server_info">Сервер: %1$s</string>
     <string name="config_title">Конфиг</string>
     <string name="server_turnoff">Выключить сервер</string>
     <string name="server_enable">Включить сервер</string>
@@ -12,4 +12,8 @@
     <string name="swipe_direction_up">вверх</string>
     <string name="swipe_length">длина свайпа: %1$s</string>
     <string name="initial_position_x_y">x: %1$s y: %2$s</string>
+    <string name="server_port">Порт: %1$s</string>
+    <string name="action_cancel">Отмена</string>
+    <string name="action_save">Сохранить</string>
+    <string name="server_port_title">Порт сервера</string>
 </resources>

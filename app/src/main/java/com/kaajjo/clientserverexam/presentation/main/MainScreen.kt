@@ -92,7 +92,11 @@ fun MainScreen(
                 Text(stringResource(R.string.logs_title))
             }
             Text(
-                text = stringResource(R.string.server_info, ipAddress, serverPort),
+                text = stringResource(R.string.server_info, ipAddress),
+                style = MaterialTheme.typography.labelLarge
+            )
+            Text(
+                text = stringResource(R.string.server_port, serverPort),
                 style = MaterialTheme.typography.labelLarge
             )
         }
@@ -108,11 +112,11 @@ fun MainScreen(
                         contentDescription = null
                     )
                 },
-                title = { Text("Конфиг") },
+                title = { Text(stringResource(R.string.config_title)) },
                 onDismissRequest = { configDialog = false },
                 dismissButton = {
                     TextButton(onClick = { configDialog = false }) {
-                        Text("Отмена")
+                        Text(stringResource(R.string.action_cancel))
                     }
                 },
                 confirmButton = {
@@ -120,13 +124,13 @@ fun MainScreen(
                         configDialog = false
                         viewModel.updatePort(newPort.toInt())
                     }) {
-                        Text("Сохранить")
+                        Text(stringResource(R.string.action_save))
                     }
                 },
                 text = {
                     Column {
                         OutlinedTextField(
-                            label = { Text("Порт сервера") },
+                            label = { Text(stringResource(R.string.server_port_title)) },
                             value = newPort,
                             onValueChange = { newPort = it },
                             keyboardOptions = KeyboardOptions(
@@ -146,7 +150,7 @@ fun MainScreen(
         if (connectivityManager is ConnectivityManager) {
             val link: LinkProperties =
                 connectivityManager.getLinkProperties(connectivityManager.activeNetwork) as LinkProperties
-            ipAddress = link.linkAddresses[1].address.hostAddress?.toString() ?: "null"
+            ipAddress = link.linkAddresses.toString()
         }
 
     }

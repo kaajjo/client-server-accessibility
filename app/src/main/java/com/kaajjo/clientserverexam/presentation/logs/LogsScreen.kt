@@ -41,6 +41,8 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.kaajjo.clientserverexam.R
 import com.kaajjo.clientserverexam.data.local.database.entity.SwipeAction
+import com.kaajjo.clientserverexam.ui.theme.goodBackground
+import com.kaajjo.clientserverexam.ui.theme.goodForeground
 import java.time.format.DateTimeFormatter
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -101,14 +103,13 @@ fun LogItem(
             }
             ColoredBox(
                 background =
-                if (log.gestureCompleted) Color(0xFF4C662B)
+                if (log.gestureCompleted) goodBackground
                 else MaterialTheme.colorScheme.errorContainer
             ) {
                 Text(
                     text = if (log.gestureCompleted) stringResource(R.string.gesture_completed)
                     else stringResource(R.string.gesture_canceled),
-                    color =
-                    if (log.gestureCompleted) Color(0xFFFFFFFF)
+                    color = if (log.gestureCompleted) goodForeground
                     else MaterialTheme.colorScheme.onErrorContainer,
                     style = MaterialTheme.typography.labelMedium
                 )

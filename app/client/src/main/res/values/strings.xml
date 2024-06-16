@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Клиент</string>
+    <string name="server_start">Старт</string>
+    <string name="server_pause">Пауза</string>
+    <string name="config_title">Конфиг</string>
+    <string name="service_start">Запустить сервис</string>
+    <string name="service_stop">Остановить сервис</string>
+    <string name="action_cancel">Отмена</string>
+    <string name="action_save">Сохранить</string>
+    <string name="server_ip">IP адрес сервера</string>
+    <string name="server_port">Порт сервера</string>
+    <string name="accessibility_service_title">Специальные возможности</string>
+    <string name="action_enable">Включить</string>
+    <string name="accessibility_service_description">Свервис специальных возможностей отключен. Необходимо включить его в настройках</string>
+    <string name="empty_ip_port_title">Заполните данные</string>
+    <string name="empty_ip_port_description">Задайте IP адрес и порт сервера для подключения в конфиге</string>
+    <string name="dialog_ok">Ок</string>
+</resources>
